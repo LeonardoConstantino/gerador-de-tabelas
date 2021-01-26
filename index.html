@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gerador de tabelas</title>
+</head>
+<body>
+    <div id="addtitulo">
+        <h1 id="escondePrint">Crie sau tabela</h1>
+        <label for="titulotab"></label>
+        <input type="text" name="titulotab" id="titulotab" placeholder="Coloque o titulo da tabela aqui">
+        <input type="button" value="Adicionar titulo" onclick="adicionaTitulo()">
+    </div>
+
+    <div id="configurarTabela">
+        <h3>Quantas colunas terá sua tabela?</h3>
+        <div id="configurarTabela2">
+            <input type="range" name="range" id="range" value="3" min="1" max="5" onchange="mdranger()"><strong
+                id="quantidadeColunas">3</strong>
+            <input type="button" value="Confirmar colunas" onclick="confirmarcolunas()">
+        </div>
+    </div>
+
+    <div id="divTitulo"></div>
+
+    <div id="tabela">
+        <table>
+
+        </table>
+    </div>
+
+    <div id="entradaCelulas" class="naoclik">
+        <input type="text" name="cel1" id="cel1" class="celulas">
+        <input type="text" name="cel2" id="cel2" class="celulas">
+        <input type="text" name="cel3" id="cel3" class="celulas">
+        <input type="text" name="cel4" id="cel4" class="celulas">
+        <input type="text" name="cel5" id="cel5" class="celulas">
+    </div>
+
+    <div id="divaddcontittab">
+        <small class="centro">Adicione um titulo para cada coluna da sua tabela, ou deixe em branco</small>
+        <div class="centro">
+            <input type="button" id="addcontittab" value="Adicionar" onclick="addContTituloTabela()">
+            <input type="button" value="Adicionar" id="addcontctab" onclick="addConteudoCorpoTab()">
+        </div>
+    </div>
+
+    <!-- <tr>
+        <th>cel1.value</th>
+        <th>cel2.value</th>
+        <th>cel3.value</th>
+        <th>cel4.value</th>
+        <th>cel5.value</th>
+    </tr> -->
+
+    <script src="script.js"></script>
+</body>
+</html>
